@@ -4,13 +4,14 @@ ui <- fluidPage(
       sidebarLayout(
         sidebarPanel(
           sliderInput("emissions",
-                     "Emissions:",
+                     "Choose the level of emissions:",
                      min = 0,
                      max = 200,
                      value = 100)
           ),
         mainPanel(
-         plotOutput("plots")
+         plotOutput("plots"),
+         includeHTML("include.html")
       )
    )
 )
